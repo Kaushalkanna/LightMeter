@@ -2,6 +2,7 @@
     <string name="app_name">LightMeter</string>
     <string name="light_meter_unit">lux</string>
     <string name="initial_value">0</string>
-    <string name="min_lux">Min Lux:</string>
-    <string name="max_lux">Max Lux:</string>
+    <string name="min_lux">Min:</string>
+    <string name="max_lux">Max:</string>
+    <string name="avg_lux">Avg:</string>
 </resources>

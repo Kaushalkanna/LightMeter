@@ -20,7 +20,6 @@ public class MainActivity extends Activity implements SensorEventListener {
     TextView lux;
     TextView maxLux;
     TextView minLux;
-    private int luxValue = 0;
     List<Integer> listValues = new ArrayList<>();
 
     @Override
@@ -55,7 +54,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
-            luxValue = (int)event.values[0];
+            int luxValue = (int) event.values[0];
             lux.setText(String.valueOf(luxValue));
             listValues.add(luxValue);
             maxLux.setText(String.valueOf(Collections.max(listValues)));
