@@ -27,8 +27,8 @@
         android:text="@string/initial_value"
         android:id="@+id/maxLux"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/max"
+        android:layout_toEndOf="@+id/max"
         android:layout_marginLeft="3dp"
         android:layout_marginStart="3dp"
         android:textSize="30sp" />
@@ -39,18 +39,30 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/initial_value"
         android:id="@+id/minLux"
+        android:layout_marginTop="36dp"
+        android:textSize="30sp"
         android:layout_below="@+id/maxLux"
         android:layout_alignLeft="@+id/maxLux"
-        android:layout_alignStart="@+id/maxLux"
-        android:layout_marginTop="62dp"
-        android:textSize="30sp" />
+        android:layout_alignStart="@+id/maxLux" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/initial_value"
+        android:id="@+id/avgLux"
+        android:layout_marginTop="36dp"
+        android:textSize="30sp"
+        android:layout_below="@+id/minLux"
+        android:layout_alignLeft="@+id/maxLux"
+        android:layout_alignStart="@+id/maxLux" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/max_lux"
-        android:id="@+id/textView"
+        android:id="@+id/max"
         android:layout_above="@+id/minLux"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -63,18 +75,30 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/min_lux"
-        android:id="@+id/textView2"
-        android:layout_alignTop="@+id/minLux"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:textSize="30sp" />
+        android:id="@+id/min"
+        android:textSize="30sp"
+        android:layout_alignBaseline="@+id/minLux"
+        android:layout_alignBottom="@+id/minLux"
+        android:layout_toLeftOf="@+id/maxLux"
+        android:layout_toStartOf="@+id/maxLux" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/avg_lux"
+        android:id="@+id/avg"
+        android:textSize="30sp"
+        android:layout_alignTop="@+id/avgLux"
+        android:layout_alignRight="@+id/min"
+        android:layout_alignEnd="@+id/min" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/light_meter_unit"
-        android:id="@+id/textView3"
+        android:id="@+id/luxUnit"
         android:layout_alignBottom="@+id/lux"
         android:layout_toRightOf="@+id/lux"
         android:layout_toEndOf="@+id/lux"
@@ -89,7 +113,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/light_meter_unit"
-        android:id="@+id/textView4"
+        android:id="@+id/maxLuxUnit"
         android:layout_alignBottom="@+id/maxLux"
         android:layout_toRightOf="@+id/maxLux"
         android:layout_toEndOf="@+id/maxLux"
@@ -102,10 +126,23 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/light_meter_unit"
-        android:id="@+id/textView5"
+        android:id="@+id/minLuxUnit"
         android:layout_alignBottom="@+id/minLux"
         android:layout_toRightOf="@+id/minLux"
         android:layout_toEndOf="@+id/minLux"
+        android:textStyle="italic"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/light_meter_unit"
+        android:id="@+id/avgLuxUnit"
+        android:layout_alignBottom="@+id/avgLux"
+        android:layout_toRightOf="@+id/avgLux"
+        android:layout_toEndOf="@+id/avgLux"
         android:textStyle="italic"
         android:layout_marginLeft="5dp"
         android:layout_marginStart="5dp"/>

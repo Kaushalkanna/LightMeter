@@ -20,6 +20,7 @@ public class MainActivity extends Activity implements SensorEventListener {
     TextView lux;
     TextView maxLux;
     TextView minLux;
+    TextView avgLux;
     List<Integer> listValues = new ArrayList<>();
 
     @Override
@@ -29,6 +30,7 @@ public class MainActivity extends Activity implements SensorEventListener {
         lux = (TextView) findViewById(R.id.lux);
         maxLux = (TextView) findViewById(R.id.maxLux);
         minLux = (TextView) findViewById(R.id.minLux);
+        avgLux = (TextView) findViewById(R.id.avgLux);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
     }
@@ -59,8 +61,7 @@ public class MainActivity extends Activity implements SensorEventListener {
             listValues.add(luxValue);
             maxLux.setText(String.valueOf(Collections.max(listValues)));
             minLux.setText(String.valueOf(Collections.min(listValues)));
-            int avg = average(listValues);
-            Log.i("Avg lux", "" + avg);
+            avgLux.setText(String.valueOf(average(listValues)));
         }
     }
 
