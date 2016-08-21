@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MainActivity extends Activity implements SensorEventListener {
+public class LightMeterActivity extends Activity implements SensorEventListener {
 
     private SensorManager sensorManager;
     private Sensor lightSensor;
@@ -26,7 +26,7 @@ public class MainActivity extends Activity implements SensorEventListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.light_main);
         lux = (TextView) findViewById(R.id.lux);
         maxLux = (TextView) findViewById(R.id.maxLux);
         minLux = (TextView) findViewById(R.id.minLux);
